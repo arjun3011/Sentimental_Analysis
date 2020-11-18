@@ -1,0 +1,9 @@
+install python 3.x
+
+then after installing python type (in cmd) "pip install Flask" or "pip3 install Flask", (whichever works)
+
+then hit in any code editor, open the whole project folder, and hit "python3 server.py" or "python server.py"(or simply in terminal, at project directory)(whichever command works)
+
+then visit localhost:5000 in your browser
+
+further description is given in server.py
