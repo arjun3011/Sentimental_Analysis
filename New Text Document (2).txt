@@ -1,1 +1,0 @@
-wait_on_rate_limit=True,wait_on_rate_limit_notify=True
