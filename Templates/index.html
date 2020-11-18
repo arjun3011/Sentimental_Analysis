@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url('static/robotoSlab_regular.ttf') 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height:100%;
+        }
+        body{
+            text-align: center;
+            font-family: myFont;
+            font-size: 18px;
+            height:100%;
+        }
+        input {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #info-btn{
+            width: 19.5%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #info-btn:hover{
+            background-color: #45a049;
+        }
+        #clear-btn{
+            width: 19.5%;
+            background-color: tomato;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #clear-btn:hover{
+            background-color: red;
+        }
+        .wrapper{
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 60%;
+            height:94%;
+            margin:auto;
+        }
+        #reply{
+            padding-top:50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Sentiment Analysis</h1>
+        <div class="form__group field">
+            <br>
+            <label for="data" class="form__label">Enter Keyword/Tag to search about</label><br>
+            <input id="data" class="form__field" placeholder="Enter" name="info" required><br><br>
+            <label for="searchTerm" class="form__label">Enter how many tweets to search</label><br>
+            <input id="searchTerm" class="form__field" placeholder="Enter" name="searchTerm" required><br>
+            <button id="info-btn">Send</button>
+            <button id="clear-btn">Clear All</button>
+            <p id="reply"></p>
+        </div>
+    </div>
+    <!-- JS File -->
+    <script src="{{ url_for('static', filename='main.js')  }}" defer></script>
+</body>
+</html>
